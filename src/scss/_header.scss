@@ -128,7 +128,7 @@ nav {
 }
 
 // layout and styling hamburger-menu
-#hamburgerButton {
+#hamburger__button {
   display: flex; //
   justify-content: center;
   align-items: center;
@@ -145,7 +145,7 @@ nav {
     display: none;
   }
 
-  .icon {
+  .hamburger__icon {
     color: col.$color-grey-very-dark;
     font-size: 4rem;
   }

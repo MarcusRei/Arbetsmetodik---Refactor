@@ -16,7 +16,7 @@ userCartBtn.addEventListener("click", () => {
 });
 
 // hamburgermenu button
-document.getElementById("hamburgerButton")?.addEventListener("click", () => {
+document.getElementById("hamburger__button")?.addEventListener("click", () => {
   toggleHamburgerMenu();
 });
 
