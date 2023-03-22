@@ -1,6 +1,6 @@
-@use "mixins" as mix;
-@use "colors" as col;
-@use "variables" as var;
+@use 'mixins' as mix;
+@use 'colors' as col;
+@use 'variables' as var;
 
 .modal {
   font-family: var.$font-main;

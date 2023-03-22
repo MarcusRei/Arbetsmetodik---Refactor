@@ -8,8 +8,7 @@ Jag har bestämt mig för att använda conventional commit då det känns tydlig
 
 ### 🖌️ SCSS
 
-Då den scss som är skriven är en mix av kod som jag skrivit helt på egen hand och kod som skrivits av andra medlemmar i ett tidigare grupparbete.
-Scss:en är en aning rörig då vi har blandat olika konventioner för både namngivning av klasser men också hur mycket vi har använt de fördelar scss faktiskt ger oss.
+Då den scss som är skriven är en mix av kod som jag skrivit helt på egen hand och kod som skrivits av andra medlemmar i ett tidigare grupparbete. Scss:en är en aning rörig då vi har blandat olika konventioner för både namngivning av klasser men också hur mycket vi har använt de fördelar scss faktiskt ger oss.
 
 Jag kommer även att köra stylelint på vår scss för att städa upp koden från semantiska fel.
 
