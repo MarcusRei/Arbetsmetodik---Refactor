@@ -11,115 +11,116 @@ footer {
   color: col.$color-text-light;
 }
 
-.information-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-
-  @include mix.desktop {
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: flex-start;
-    text-align: left;
-  }
-}
-// customerservice layout
-.customerservice {
-  &-container {
+.footer {
+  &__copyright-container {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    gap: 1em;
-    margin: 1.5em;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+  }
+
+  &__logotype-img {
+    width: 30vw;
 
     @include mix.desktop {
-      width: auto;
+      display: flex;
+      width: 10vw;
     }
   }
-  &-title {
-    margin: 0;
-    font-size: 1em;
-    text-align: center;
 
-    @include mix.desktop {
-      text-align: left;
-      font-size: 1em;
-    }
-  }
-  &-info {
-    margin: 0;
-    font-family: var.$font-secondary;
-    font-weight: 400;
-    font-size: 1.1em;
-
-    @include mix.desktop {
-      font-size: 1.2em;
-    }
-  }
-}
-// contact layout
-.contact {
-  &-container {
+  &__information-container {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    gap: 0.5em;
-    margin: 1.5em;
-
-    @include mix.desktop {
-      width: auto;
-    }
-  }
-  &-title {
-    margin: 0;
-    font-size: 1em;
+    align-items: center;
     text-align: center;
 
     @include mix.desktop {
+      justify-content: space-around;
+      flex-direction: row;
+      align-items: flex-start;
       text-align: left;
-      font-size: 1.3em;
     }
   }
 
-  &-info {
-    margin: 0;
-    font-size: 0.8em;
-    text-align: center;
+  &__customerservice {
+    &-container {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      gap: 1em;
+      margin: 1.5em;
 
-    @include mix.desktop {
-      text-align: left;
+      @include mix.desktop {
+        width: auto;
+      }
+    }
+    &-title {
+      margin: 0;
       font-size: 1em;
-    }
-    &__body {
-      font-family: var.$font-secondary;
-      font-weight: 400;
-      font-size: 1.1em;
       text-align: center;
 
       @include mix.desktop {
-        font-size: 1.2em;
         text-align: left;
+        font-size: 1em;
+      }
+    }
+    &-info {
+      margin: 0;
+      font-family: var.$font-secondary;
+      font-weight: 400;
+      font-size: 1.1em;
+
+      @include mix.desktop {
+        font-size: 1.2em;
       }
     }
   }
-}
 
-.logotype-img {
-  width: 30vw;
+  &__contact {
+    &-container {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      gap: 0.5em;
+      margin: 1.5em;
 
-  @include mix.desktop {
-    display: flex;
-    width: 10vw;
+      @include mix.desktop {
+        width: auto;
+      }
+    }
+    &-title {
+      margin: 0;
+      font-size: 1em;
+      text-align: center;
+
+      @include mix.desktop {
+        text-align: left;
+        font-size: 1.3em;
+      }
+    }
+
+    &-info {
+      margin: 0;
+      font-size: 0.8em;
+      text-align: center;
+
+      @include mix.desktop {
+        text-align: left;
+        font-size: 1em;
+      }
+      &__body {
+        font-family: var.$font-secondary;
+        font-weight: 400;
+        font-size: 1.1em;
+        text-align: center;
+
+        @include mix.desktop {
+          font-size: 1.2em;
+          text-align: left;
+        }
+      }
+    }
   }
-}
-
-// copyright layout
-.copyright-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 50px;
 }
