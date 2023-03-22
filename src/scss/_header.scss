@@ -27,7 +27,7 @@ nav {
   }
 
   .logo {
-    &-container {
+    &__container {
       display: flex;
       justify-content: center;
       align-self: center;
@@ -40,12 +40,12 @@ nav {
         height: var.$header-height--desktop;
       }
     }
-    &-box {
+    &__box {
       display: flex;
       align-items: center;
       height: 100%;
     }
-    &-icon {
+    &__icon {
       height: 60%;
 
       @include mix.desktop {
