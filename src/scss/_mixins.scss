@@ -1,0 +1,43 @@
+@use "variables" as var;
+@use "colors" as col;
+
+//Screen size
+@mixin mobile-only {
+  @media screen and (max-width: var.$tablet) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: var.$desktop) {
+    @content;
+  }
+}
+@mixin desktop--big-scr {
+  @media screen and (min-width: var.$big-scr) {
+    @content;
+  }
+}
+
+//Buttons
+@mixin main-button {
+  background-color: col.$color-accent-purple;
+  color: col.$color-text-light;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+//header
+@mixin header {
+  height: var.$header-height--mobile;
+
+  @media screen and (min-width: var.$tablet) {
+    height: var.$header-height--tablet;
+  }
+  @media screen and (min-width: var.$desktop) {
+    height: var.$header-height--desktop;
+  }
+}

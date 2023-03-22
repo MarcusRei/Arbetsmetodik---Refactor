@@ -1,0 +1,172 @@
+@use "mixins" as mix;
+@use "colors" as col;
+@use "variables" as var;
+
+#checkout {
+  &--main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    margin-top: 10vh;
+    min-height: 100vh;
+    background-color: col.$color-grey-very-dark;
+    color: col.$color-text-light;
+  }
+
+  &Btn {
+    width: 50%;
+    align-self: center;
+    font-weight: 600;
+    color: col.$color-text-light;
+    font-family: var.$font-main;
+
+    @include mix.main-button;
+
+    @include mix.desktop {
+      font-size: large;
+      padding: 5px;
+      height: 8vh;
+      width: 20%;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+#shoppingCart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @include mix.desktop {
+    width: 70%;
+    font-size: 1.3em;
+  }
+  &-title {
+    font-size: 1.8em;
+    margin: 15px 0px 5px 0px;
+
+    @include mix.desktop {
+      font-size: 2em;
+    }
+  }
+}
+
+// produkt row
+.itemRow {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  padding: 0 5px 0 5px;
+  width: 95%;
+  justify-content: space-between;
+  border-radius: 5px;
+  background-color: col.$color-grey-dark;
+  color: col.$color-text-light;
+
+  @include mix.desktop {
+    width: 80%;
+    height: 10vh;
+    justify-content: space-between;
+    font-size: larger;
+  }
+
+  &__Img {
+    height: 5vh;
+    @include mix.desktop {
+      height: 8vh;
+    }
+  }
+  &__remove-btn {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: col.$color-accent-purple;
+    color: col.$color-text-light;
+    border: none;
+    border-radius: 5px;
+
+    @include mix.desktop {
+      width: 10%;
+    }
+    &:hover {
+      background-color: col.$color-grey-very-dark;
+      cursor: pointer;
+    }
+  }
+  &__quantity {
+    &-container {
+      display: flex;
+      height: 30px;
+      @include mix.desktop {
+        height: 5vh;
+      }
+    }
+    &-input {
+      width: 20%;
+      @include mix.desktop {
+        width: 20%;
+      }
+    }
+  }
+  &:last-child {
+    margin: 5px 5px 0 5px;
+  }
+}
+
+.checkout {
+  &-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5%;
+    padding-left: 3%;
+    @include mix.desktop {
+      width: 10%;
+      padding-left: 0;
+    }
+  }
+
+  &-name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    @include mix.desktop {
+      width: 55%;
+    }
+  }
+
+  &-product-change-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 35%;
+    padding-right: 1%;
+    @include mix.desktop {
+      width: 30%;
+      padding-right: 0;
+      justify-content: space-evenly;
+    }
+  }
+}
+//summa & checkout knapp
+.sumContainer {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: col.$color-grey-dark;
+  border-radius: 10px;
+  width: 80%;
+  color: col.$color-text-light;
+
+  @include mix.desktop {
+    font-size: x-large;
+    width: 50%;
+  }
+}

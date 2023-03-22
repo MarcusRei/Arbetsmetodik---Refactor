@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Cursed Cauldron Checkout</title>
+    <link rel="icon" type="image/png" href="../assets/images/TimeLarge.png" />
+    <link rel="stylesheet" href="../scss/main.scss" />
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital@1&family=Passions+Conflict&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script defer src="../ts/checkout.ts" type="module"></script>
+    <script defer src="../ts/main.ts" type="module"></script>
+  </head>
+  <body id="checkout--body">
+    <header>
+      <nav>
+        <div class="logo-container home-button">
+          <a href="/" class="logo-box">
+            <img
+              src="../assets/images/burnedCauldron.png"
+              alt="The Cursed Cauldron Logo"
+              class="logo-icon"
+            />
+          </a>
+        </div>
+
+        <!-- desktopnav -->
+        <div class="desktopnav-container">
+          <ul class="desktopnav-menu desktopnav-menu__checkout">
+            <li>
+              <a href="./products.html" class="menu-link">Products</a>
+            </li>
+            <li>
+              <a href="./checkout.html" class="menu-link">Checkout</a>
+            </li>
+          </ul>
+          <div class="shoppingcart-container shoppingcart-container__checkout">
+            <span class="material-symbols-outlined cart-icon">
+              shopping_basket
+            </span>
+          </div>
+        </div>
+      </nav>
+
+      <!-- hamburger-button -->
+      <button id="hamburgerButton" type="button">
+        <span class="material-symbols-rounded icon" id="menuIcon">menu</span>
+        <span class="material-symbols-rounded icon" id="closeIcon">close</span>
+      </button>
+
+      <!-- mobilenav -->
+      <div class="mobilenav-container" id="mobilenav">
+        <ul class="mobilenav-menu">
+          <li class="hamburger-menu-item">
+            <a href="./products.html" class="menu-link-mobile">Products</a>
+          </li>
+          <li class="hamburger-menu-item">
+            <a href="./checkout.html" class="menu-link-mobile">Checkout</a>
+          </li>
+        </ul>
+      </div>
+      <article id="user-cart__container" class="user-cart__invisible"></article>
+    </header>
+
+    <!-- main-content -->
+    <main id="checkout--main">
+      <h1 id="shoppingCart-title">Your selected potions:</h1>
+      <section id="shoppingCart">
+        <h1>If you see this, <br />ghasts have taken your items</h1>
+        <h3>
+          We are sorry about this & hope that you have better luck next time!
+        </h3>
+        <p>You don't need to pay what the ghasts have taken</p>
+      </section>
+      <section class="sumContainer">
+        <p>Total amount:</p>
+        <p id="sumOfShoppingCart"></p>
+      </section>
+      <button type="button" id="checkoutBtn">Checkout</button>
+    </main>
+
+    <!-- footer -->
+    <footer id="footer">
+      <div class="information-container">
+        <div class="customerservice-container">
+          <h3 class="customerservice-title">Customer service</h3>
+          <p class="customerservice-info">Talk wisely to the Shady Lady</p>
+        </div>
+        <div class="contact-container">
+          <h3 class="contact-title">Contact</h3>
+          <h4 class="contact-info">Send your crow to:</h4>
+          <span class="contact-info contact-info__body"
+            >The Cursed Cauldron</span
+          >
+          <span class="contact-info contact-info__body"
+            >The Dark alley of Dragonsdoom</span
+          >
+        </div>
+        <img
+          src="../assets/images/logoName&Cauldron.png"
+          alt="The Cursed Cauldron Logotype"
+          class="logotype-img"
+        />
+      </div>
+      <div class="copyright-container">
+        <span class="copyright">The Cursed Cauldron &copy; 2022</span>
+      </div>
+    </footer>
+
+    <!--modal for checkout-->
+    <div id="checkoutModal" class="modal modal-content--invisible">
+      <div class="modal-content">
+        <span class="modal-content__close">&times;</span>
+        <p class="modal-content__text" id="modalContent__sum"></p>
+        <p class="modal-content__text" id="modalContent__text"></p>
+      </div>
+    </div>
+  </body>
+</html>

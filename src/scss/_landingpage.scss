@@ -1,0 +1,48 @@
+@use "mixins" as mix;
+@use "colors" as col;
+@use "variables" as var;
+
+#landing-page-body {
+  background-color: col.$color-grey-very-dark;
+  font-family: var.$font-main;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  #message-container {
+    color: col.$color-text-light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    #message-heading {
+      text-align: center;
+    }
+
+    #message-paragraph {
+      width: 60%;
+      text-align: center;
+    }
+  }
+}
+
+#enter-btn {
+  width: 6em;
+  font-size: 2em;
+  padding: 1em;
+
+  @include mix.main-button;
+  border-radius: 15px;
+
+  font-family: var.$font-main;
+}
+
+//design elements
+#store {
+}

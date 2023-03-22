@@ -1,0 +1,56 @@
+@use "mixins" as mix;
+@use "colors" as col;
+@use "variables" as var;
+
+.modal {
+  font-family: var.$font-main;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50vh; /*location of box on screen*/
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(col.$color-grey-very-light, 0.3);
+
+  &-content {
+    background-color: col.$color-grey-very-dark;
+    color: col.$color-text-light;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    width: 40%;
+    transform: translate(0, -50%);
+    @include mix.desktop {
+      width: 20%;
+    }
+
+    &__close {
+      font-size: x-large;
+      color: col.$color-text-light;
+      font-weight: bolder;
+      margin-left: 0.5em;
+
+      &:hover,
+      &:focus {
+        color: col.$color-accent-purple;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+    &__text {
+      text-align: center;
+      margin: 0 0 10px 0;
+      @include mix.desktop {
+        font-size: larger;
+        margin: 20px;
+      }
+    }
+    &--visible {
+      display: block;
+    }
+    &--invisible {
+      display: none;
+    }
+  }
+}

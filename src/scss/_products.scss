@@ -1,0 +1,114 @@
+@use "mixins" as mix;
+@use "colors" as col;
+@use "variables" as var;
+
+#products {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: col.$color-text-light;
+  margin-top: 6em;
+  background-color: col.$color-grey-very-dark;
+}
+
+.product {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    margin-top: 1em;
+    margin-bottom: 5em;
+
+    @include mix.desktop {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 70vw;
+      gap: 2em;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    gap: 0.3em;
+    padding: 1em;
+    width: 60%;
+    background-color: col.$color-grey-dark;
+
+    @include mix.desktop {
+      width: 25%;
+    }
+    &-image {
+      width: 90%;
+      z-index: 1;
+
+      @include mix.desktop {
+        width: 90%;
+      }
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    margin-top: -1em;
+    @include mix.desktop {
+      width: 95%;
+    }
+    &-name {
+      font-weight: 600;
+      width: 100%;
+      margin-top: 1.5em;
+      width: 70%;
+      align-self: center;
+
+      @include mix.desktop {
+        margin-bottom: 0;
+        margin-top: 2em;
+        width: 80%;
+      }
+    }
+    &-price {
+      font-weight: 600;
+      padding-left: 1.8em;
+
+      @include mix.desktop {
+        padding-left: 0;
+        width: 80%;
+      }
+    }
+    &-amount {
+      width: 2em;
+    }
+    &-text-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-buy-btn {
+      @include mix.main-button;
+      font-family: var.$font-main;
+      font-weight: 600;
+      cursor: pointer;
+
+      &:hover {
+        background-color: col.$color-grey-very-light;
+      }
+    }
+  }
+  &__inputs {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+  }
+}
