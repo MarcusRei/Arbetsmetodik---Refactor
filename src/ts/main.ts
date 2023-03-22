@@ -7,7 +7,7 @@ import {
 
 // usercart button
 let userCartBtn: HTMLButtonElement = document.querySelector(
-  ".shoppingcart-container"
+  ".shoppingcart__container"
 ) as HTMLButtonElement;
 
 userCartBtn.addEventListener("click", () => {
