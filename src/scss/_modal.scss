@@ -6,11 +6,11 @@
   font-family: var.$font-main;
   position: fixed;
   z-index: 1;
-  padding-top: 50vh; /*location of box on screen*/
+  padding-top: 50vh;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
+  width: 100%;
+  height: 100%;
   background-color: rgba(col.$color-grey-very-light, 0.3);
 
   &-content {
