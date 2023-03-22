@@ -56,13 +56,13 @@ nav {
   }
 
   .desktopnav {
-    &-container {
+    &__container {
       position: relative;
       display: flex;
       flex-direction: row;
       justify-content: center;
     }
-    &-menu {
+    &__menu {
       display: none;
       flex-direction: column;
       justify-content: center;
@@ -72,7 +72,7 @@ nav {
       list-style-type: none;
       margin: 0;
 
-      &__checkout {
+      &-checkout {
         margin-right: 2rem;
       }
 
@@ -86,7 +86,7 @@ nav {
     }
   }
 
-  .menu-link {
+  .desktopnav__link {
     text-decoration: none;
     color: col.$color-text-light;
 
@@ -127,7 +127,7 @@ nav {
   }
 }
 
-// layout and styling hamburger-menu
+//hamburger-menu
 #hamburger__button {
   display: flex; //
   justify-content: center;
