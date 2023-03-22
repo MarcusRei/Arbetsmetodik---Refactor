@@ -7,25 +7,27 @@
   font-family: var.$font-main;
 }
 
-.content-container {
+.main__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
 
-  #message-container {
-    color: col.$color-text-light;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  .welcome {
+    &__container {
+      color: col.$color-text-light;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
 
-    #message-heading {
+    &__heading {
       text-align: center;
     }
 
-    #message-paragraph {
+    &__body {
       width: 60%;
       text-align: center;
     }
@@ -39,10 +41,5 @@
 
   @include mix.main-button;
   border-radius: 15px;
-
   font-family: var.$font-main;
-}
-
-//design elements
-#store {
 }
