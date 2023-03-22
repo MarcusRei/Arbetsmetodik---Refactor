@@ -35,7 +35,7 @@ export let userCart: CartProductTemplate[] = getUserCartFromLS();
 
 //Renders the usercart
 export function showShoppingCart() {
-  (document.querySelector("#shoppingCart") as HTMLElement).innerText =
+  (document.querySelector("#checkout__cart") as HTMLElement).innerText =
     "You have not selected any potions";
 
   let sumCheckout = document.getElementById(
@@ -44,12 +44,12 @@ export function showShoppingCart() {
   sumCheckout.innerText = "0 G";
   let cartLength = userCart.length;
   if (cartLength !== 0) {
-    (document.querySelector("#shoppingCart") as HTMLElement).innerText = "";
+    (document.querySelector("#checkout__cart") as HTMLElement).innerText = "";
     for (let i = 0; i < userCart.length; i++) {
       //create article for product
       let itemRow = document.createElement("article");
       itemRow.classList.add("itemRow");
-      document.querySelector("#shoppingCart")?.appendChild(itemRow);
+      document.querySelector("#checkout__cart")?.appendChild(itemRow);
 
       //Create container for image
       let imgContainer = document.createElement("div");
