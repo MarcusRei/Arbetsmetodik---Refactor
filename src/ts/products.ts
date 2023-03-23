@@ -1,4 +1,4 @@
-import { getUserCartFromLS, putUserCartInLS } from './localStorage';
+import { getUserCartFromLS } from './localStorage';
 import { CartProductTemplate } from './models/CartProductTemplate';
 import { products } from './models/ProductList';
 import { ProductTemplate } from './models/ProductTemplate';
@@ -17,8 +17,8 @@ import {
   toggleStamina,
   toggleTime,
 } from './services/filter';
-import { renderUserCartinWidget } from './services/userCartWidget';
-import { addProductToCart, changeQuantity } from './shoppingCartChanges';
+import { renderUserCartInWidget } from './services/userCartWidget';
+import { addProductToCart } from './shoppingCartChanges';
 
 (document.querySelector('#products') as HTMLBodyElement).onload = function () {
   renderProductlist(products);
@@ -82,13 +82,13 @@ export function renderProductlist(listToRender: ProductTemplate[]) {
     productButton.addEventListener('click', () => {
       let productsPageUserCart: CartProductTemplate[] = getUserCartFromLS() || '[]';
       addProductToCart(productsPageUserCart, listToRender[i], productAmount.value);
-      renderUserCartinWidget();
+      renderUserCartInWidget();
     });
   }
 }
 
-let filterBtn: HTMLButtonElement = document.getElementById('clear-filter') as HTMLButtonElement;
-filterBtn.addEventListener('click', () => {
+let clearFilterBtn: HTMLButtonElement = document.getElementById('clear-filter') as HTMLButtonElement;
+clearFilterBtn.addEventListener('click', () => {
   checkboxSmall.checked = false;
   checkboxMedium.checked = false;
   checkboxLarge.checked = false;
@@ -104,14 +104,11 @@ filterBtn.addEventListener('click', () => {
 });
 
 const filterButton: HTMLButtonElement = document.getElementById('filter-btn') as HTMLButtonElement;
-
 filterButton.addEventListener('click', () => {
   showFilter();
-  console.log('filter was clicked');
 });
 
 const filterBackground: HTMLDivElement = document.getElementById('filter-background') as HTMLDivElement;
-
 filterBackground.addEventListener('click', () => {
   closeFilter();
 });

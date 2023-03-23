@@ -27,11 +27,10 @@ export function toggleUserCartWidget() {
   }
 }
 
-export function renderUserCartinWidget() {
+export function renderUserCartInWidget() {
   let userCartInWidget: CartProductTemplate[] = getUserCartFromLS();
   let sumUsercart: string = sumUsercartTotal(userCartInWidget);
   userCartWidget.innerHTML = '';
-  console.log('usercart was updated');
   if (userCartInWidget.length === 0) {
     let emptyCart = document.createElement('div');
     emptyCart.classList.add('user-cart-item__container');
@@ -113,7 +112,6 @@ export function renderUserCartinWidget() {
     checkoutLink.innerHTML = `CHECKOUT`;
     checkoutButtonContainer.appendChild(checkoutLink);
 
-    console.log(sumUsercart);
     let usercartTotal = document.createElement('div');
     usercartTotal.classList.add('checkout-total');
     usercartTotal.setAttribute('id', 'usercart-total-amount');

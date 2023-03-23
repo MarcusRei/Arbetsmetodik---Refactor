@@ -1,12 +1,12 @@
 import { getUserCartFromLS, putUserCartInLS } from './localStorage';
 import { CartProductTemplate } from './models/CartProductTemplate';
-import { renderUserCartinWidget, toggleUserCartWidget } from './services/userCartWidget';
+import { renderUserCartInWidget, toggleUserCartWidget } from './services/userCartWidget';
 
 let userCartBtn: HTMLButtonElement = document.querySelector('.shoppingcart__container') as HTMLButtonElement;
 
 userCartBtn.addEventListener('click', () => {
   toggleUserCartWidget();
-  renderUserCartinWidget();
+  renderUserCartInWidget();
 });
 
 document.getElementById('hamburger__button')?.addEventListener('click', () => {

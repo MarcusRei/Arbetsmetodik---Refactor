@@ -10,7 +10,6 @@ import { sumTotalPrice } from './totalAmount';
   let checkoutBtn = document.getElementById('checkoutBtn') as HTMLButtonElement;
 
   checkoutBtn.addEventListener('click', () => {
-    console.log("i've been clicked");
     startModalFunctionality();
   });
 
