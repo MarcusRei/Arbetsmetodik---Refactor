@@ -1,6 +1,6 @@
-@use "mixins" as mix;
-@use "variables" as var;
-@use "colors" as col;
+@use 'mixins' as mix;
+@use 'variables' as var;
+@use 'colors' as col;
 
 // layout header
 header {
@@ -27,7 +27,7 @@ nav {
   }
 
   .logo {
-    &-container {
+    &__container {
       display: flex;
       justify-content: center;
       align-self: center;
@@ -40,12 +40,12 @@ nav {
         height: var.$header-height--desktop;
       }
     }
-    &-box {
+    &__box {
       display: flex;
       align-items: center;
       height: 100%;
     }
-    &-icon {
+    &__icon {
       height: 60%;
 
       @include mix.desktop {
@@ -56,13 +56,13 @@ nav {
   }
 
   .desktopnav {
-    &-container {
+    &__container {
       position: relative;
       display: flex;
       flex-direction: row;
       justify-content: center;
     }
-    &-menu {
+    &__menu {
       display: none;
       flex-direction: column;
       justify-content: center;
@@ -72,7 +72,7 @@ nav {
       list-style-type: none;
       margin: 0;
 
-      &__checkout {
+      &-checkout {
         margin-right: 2rem;
       }
 
@@ -86,7 +86,7 @@ nav {
     }
   }
 
-  .menu-link {
+  .desktopnav__link {
     text-decoration: none;
     color: col.$color-text-light;
 
@@ -95,7 +95,7 @@ nav {
     }
   }
 
-  .shoppingcart-container {
+  .shoppingcart__container {
     display: flex;
     height: var.$header-height--mobile;
     justify-content: flex-end;
@@ -113,7 +113,7 @@ nav {
       display: none;
     }
 
-    .cart-icon {
+    .shoppingcart__icon {
       color: col.$color-grey-very-dark;
       font-size: 3em;
       display: flex;
@@ -127,8 +127,8 @@ nav {
   }
 }
 
-// layout and styling hamburger-menu
-#hamburgerButton {
+//hamburger-menu
+#hamburger__button {
   display: flex; //
   justify-content: center;
   align-items: center;
@@ -145,7 +145,7 @@ nav {
     display: none;
   }
 
-  .icon {
+  .hamburger__icon {
     color: col.$color-grey-very-dark;
     font-size: 4rem;
   }
@@ -156,7 +156,7 @@ nav {
 }
 
 .mobilenav {
-  &-container {
+  &__container {
     display: none;
     flex-direction: column;
     transform: translateY(-100%);
@@ -169,7 +169,7 @@ nav {
       display: none;
     }
 
-    .menu-link-mobile {
+    .mobilenav__menu-link {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -189,7 +189,8 @@ nav {
       display: none;
     }
   }
-  &-menu {
+
+  &__menu {
     list-style-type: none;
     padding: 0;
     display: flex;
@@ -201,20 +202,21 @@ nav {
       display: none;
     }
   }
-}
-.hamburger-menu-item {
-  background-color: col.$color-grey-light;
-  width: 100vw;
-  height: 10vh;
-  display: flex;
-  justify-content: center;
 
-  &:first-child {
-    margin-top: 1.4em;
-  }
+  &__menu-item {
+    background-color: col.$color-grey-light;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
 
-  &:last-child {
-    border-top: 3px dashed;
-    border-color: col.$color-grey-very-dark;
+    &:first-child {
+      margin-top: 1.4em;
+    }
+
+    &:last-child {
+      border-top: 3px dashed;
+      border-color: col.$color-grey-very-dark;
+    }
   }
 }

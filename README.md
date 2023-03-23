@@ -6,11 +6,18 @@ Jag har bestämt mig för att använda conventional commit då det känns tydlig
 
 ## Delar att refaktorera
 
-### 🖌️ SCSS
+### SCSS
 
-Då den scss som är skriven är en mix av kod som jag skrivit helt på egen hand och kod som skrivits av andra medlemmar i ett tidigare grupparbete.
-Scss:en är en aning rörig då vi har blandat olika konventioner för både namngivning av klasser men också hur mycket vi har använt de fördelar scss faktiskt ger oss.
+Då den scss som är skriven är en mix av kod som jag skrivit helt på egen hand och kod som skrivits av andra medlemmar i ett tidigare grupparbete. Scss:en är en aning rörig då vi har blandat olika konventioner för både namngivning av klasser men också hur mycket vi har använt de fördelar scss faktiskt ger oss.
 
 Jag kommer även att köra stylelint på vår scss för att städa upp koden från semantiska fel.
 
-## Framsteg
+### Eslint & Prettier
+
+Jag kommer att använda både prettier och eslint för att formatera om koden så att den följer en mer konkret standard.
+
+### Manuell rensning i koden
+
+När vi gjorde projektet ursprungligen så skrev vi mycket kommentarer för att förmedla vad saker var till varandra och hur de fungerade. Jag kommer ta bort alla kommentarer som förklarar "hur" något fungerar men lämnar kommentarer om de förklarar "varför" saker ser ut som de gör.
+
+Jag kommer även att ta bort alla loggar som inte längre fyller ett syfte.

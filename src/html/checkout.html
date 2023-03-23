@@ -29,48 +29,42 @@
   <body id="checkout--body">
     <header>
       <nav>
-        <div class="logo-container home-button">
-          <a href="/" class="logo-box">
-            <img
-              src="../assets/images/burnedCauldron.png"
-              alt="The Cursed Cauldron Logo"
-              class="logo-icon"
-            />
+        <div class="logo__container home-button">
+          <a href="/" class="logo__box">
+            <img src="../assets/images/burnedCauldron.png" alt="The Cursed Cauldron Logo" class="logo__icon" />
           </a>
         </div>
 
         <!-- desktopnav -->
-        <div class="desktopnav-container">
-          <ul class="desktopnav-menu desktopnav-menu__checkout">
+        <div class="desktopnav__container">
+          <ul class="desktopnav__menu desktopnav-menu-checkout">
             <li>
-              <a href="./products.html" class="menu-link">Products</a>
+              <a href="./products.html" class="desktopnav__link">Products</a>
             </li>
             <li>
-              <a href="./checkout.html" class="menu-link">Checkout</a>
+              <a href="./checkout.html" class="desktopnav__link">Checkout</a>
             </li>
           </ul>
-          <div class="shoppingcart-container shoppingcart-container__checkout">
-            <span class="material-symbols-outlined cart-icon">
-              shopping_basket
-            </span>
+          <div class="shoppingcart__container shoppingcart-container__checkout">
+            <span class="material-symbols-outlined shoppingcart__icon"> shopping_basket </span>
           </div>
         </div>
       </nav>
 
       <!-- hamburger-button -->
-      <button id="hamburgerButton" type="button">
-        <span class="material-symbols-rounded icon" id="menuIcon">menu</span>
-        <span class="material-symbols-rounded icon" id="closeIcon">close</span>
+      <button id="hamburger__button" type="button">
+        <span class="material-symbols-rounded hamburger__icon" id="menuIcon">menu</span>
+        <span class="material-symbols-rounded hamburger__icon" id="closeIcon">close</span>
       </button>
 
       <!-- mobilenav -->
-      <div class="mobilenav-container" id="mobilenav">
-        <ul class="mobilenav-menu">
-          <li class="hamburger-menu-item">
-            <a href="./products.html" class="menu-link-mobile">Products</a>
+      <div class="mobilenav__container" id="mobilenav">
+        <ul class="mobilenav__menu">
+          <li class="mobilenav__menu-item">
+            <a href="./products.html" class="mobilenav__menu-link">Products</a>
           </li>
-          <li class="hamburger-menu-item">
-            <a href="./checkout.html" class="menu-link-mobile">Checkout</a>
+          <li class="mobilenav__menu-item">
+            <a href="./checkout.html" class="mobilenav__menu-link">Checkout</a>
           </li>
         </ul>
       </div>
@@ -78,13 +72,11 @@
     </header>
 
     <!-- main-content -->
-    <main id="checkout--main">
-      <h1 id="shoppingCart-title">Your selected potions:</h1>
-      <section id="shoppingCart">
+    <main id="checkout__container">
+      <h1 id="checkout__title">Your selected potions:</h1>
+      <section id="checkout__cart">
         <h1>If you see this, <br />ghasts have taken your items</h1>
-        <h3>
-          We are sorry about this & hope that you have better luck next time!
-        </h3>
+        <h3>We are sorry about this & hope that you have better luck next time!</h3>
         <p>You don't need to pay what the ghasts have taken</p>
       </section>
       <section class="sumContainer">
@@ -96,29 +88,25 @@
 
     <!-- footer -->
     <footer id="footer">
-      <div class="information-container">
-        <div class="customerservice-container">
-          <h3 class="customerservice-title">Customer service</h3>
-          <p class="customerservice-info">Talk wisely to the Shady Lady</p>
+      <div class="footer__information-container">
+        <div class="footer__customerservice-container">
+          <h3 class="footer__customerservice-title">Customer service</h3>
+          <p class="footer__customerservice-info">Talk wisely to the Shady Lady</p>
         </div>
-        <div class="contact-container">
-          <h3 class="contact-title">Contact</h3>
-          <h4 class="contact-info">Send your crow to:</h4>
-          <span class="contact-info contact-info__body"
-            >The Cursed Cauldron</span
-          >
-          <span class="contact-info contact-info__body"
-            >The Dark alley of Dragonsdoom</span
-          >
+        <div class="footer__contact-container">
+          <h3 class="footer__contact-title">Contact</h3>
+          <h4 class="footer__contact-info">Send your crow to:</h4>
+          <span class="footer__contact-info contact-info__body">The Cursed Cauldron</span>
+          <span class="footer__contact-info contact-info__body">The Dark alley of Dragonsdoom</span>
         </div>
         <img
           src="../assets/images/logoName&Cauldron.png"
           alt="The Cursed Cauldron Logotype"
-          class="logotype-img"
+          class="footer__logotype-img"
         />
       </div>
-      <div class="copyright-container">
-        <span class="copyright">The Cursed Cauldron &copy; 2022</span>
+      <div class="footer__copyright-container">
+        <span class="footer__copyright">The Cursed Cauldron &copy; 2022</span>
       </div>
     </footer>
 

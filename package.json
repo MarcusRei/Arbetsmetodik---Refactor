@@ -1,12 +1,22 @@
 {
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.2",
-    "parcel": "^2.8.2",
-    "@parcel/validator-typescript": "^2.8.0",
     "@parcel/transformer-typescript-tsc": "^2.8.0",
-    "tsc": "^2.0.4"
+    "@parcel/validator-typescript": "^2.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "add": "^2.0.6",
+    "eslint": "^8.36.0",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "parcel": "^2.8.2",
+    "prettier": "^2.8.6",
+    "tsc": "^2.0.4",
+    "typescript": "^5.0.2"
   },
   "scripts": {
-    "start": "npx parcel src/index.html src/html/products.html src/html/checkout.html"
+    "start": "npx parcel src/index.html src/html/products.html src/html/checkout.html",
+    "format": "npx prettier --write ."
   }
 }
