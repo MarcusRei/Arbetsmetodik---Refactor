@@ -12,4 +12,10 @@ Då den scss som är skriven är en mix av kod som jag skrivit helt på egen han
 
 Jag kommer även att köra stylelint på vår scss för att städa upp koden från semantiska fel.
 
-## Framsteg
+### Eslint & Prettier
+
+Jag kommer att använda både prettier och eslint för att formatera om koden så att den följer en mer konkret standard.
+
+### Rensa bort överblivna kommentarer
+
+När vi gjorde projektet ursprungligen så skrev vi mycket kommentarer för att förmedla vad saker var och hur de fungerade. Jag kommer ta bort alla kommentarer som förklarar "hur" något fungerar men lämnar kommentarer om de förklarar "varför".
