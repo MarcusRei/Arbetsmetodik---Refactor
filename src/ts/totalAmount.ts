@@ -1,6 +1,5 @@
 import { userCart } from './checkout';
 
-// Sums up the price of all the items in the usercart
 export function sumTotalPrice() {
   let sum: number = 0;
   let sumCheckout = document.getElementById('sumOfShoppingCart') as HTMLParagraphElement;
@@ -15,7 +14,6 @@ export function sumTotalPrice() {
     }
   }
 
-  // Presents the total in checkout and in the payment modal
   let totalPrice: string = sum.toString();
   sumCheckout.innerText = totalPrice + ' G';
   sumModal.innerText = 'Your total: ' + totalPrice + ' G';

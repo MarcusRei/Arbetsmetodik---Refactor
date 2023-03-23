@@ -2,7 +2,6 @@ import { getUserCartFromLS, putUserCartInLS } from './localStorage';
 import { CartProductTemplate } from './models/CartProductTemplate';
 import { renderUserCartinWidget, toggleUserCartWidget } from './services/userCartWidget';
 
-// usercart button
 let userCartBtn: HTMLButtonElement = document.querySelector('.shoppingcart__container') as HTMLButtonElement;
 
 userCartBtn.addEventListener('click', () => {
@@ -10,19 +9,16 @@ userCartBtn.addEventListener('click', () => {
   renderUserCartinWidget();
 });
 
-// hamburgermenu button
 document.getElementById('hamburger__button')?.addEventListener('click', () => {
   toggleHamburgerMenu();
 });
 
-// hamburgermenu toggle
 function toggleHamburgerMenu() {
   const mobileMenu = document.getElementById('mobilenav') as HTMLUListElement;
   const closeIcon = document.getElementById('closeIcon') as HTMLSpanElement;
   const menuIcon = document.getElementById('menuIcon') as HTMLSpanElement;
   let usercartContainer = document.getElementById('user-cart__container') as HTMLDivElement;
 
-  // toggle usercartwidget and hamburgermenu if hamburgermenu is clicked
   if (usercartContainer.classList.contains('user-cart__visible')) {
     usercartContainer.classList.remove('user-cart__visible');
     usercartContainer.classList.add('user-cart__invisible');

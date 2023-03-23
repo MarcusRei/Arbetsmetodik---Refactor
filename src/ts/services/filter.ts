@@ -1,6 +1,5 @@
 import { products } from '../models/ProductList';
 
-// is filter active or not
 let small: boolean = false;
 let medium: boolean = false;
 let large: boolean = false;
@@ -12,7 +11,6 @@ let joy: boolean = false;
 let time: boolean = false;
 let invisibility: boolean = false;
 
-// open filter window
 export function showFilter() {
   const filterBackground: HTMLDivElement = document.getElementById('filter-background') as HTMLDivElement;
   const filterContainer: HTMLDivElement = document.getElementById('filter-container') as HTMLDivElement;
@@ -21,7 +19,6 @@ export function showFilter() {
   filterContainer.style.display = 'flex';
 }
 
-// close filter window
 export function closeFilter() {
   const filterBackground: HTMLDivElement = document.getElementById('filter-background') as HTMLDivElement;
   const filterContainer: HTMLDivElement = document.getElementById('filter-container') as HTMLDivElement;
@@ -30,7 +27,6 @@ export function closeFilter() {
   filterContainer.style.display = 'none';
 }
 
-// resets filter
 export function clearFilter() {
   for (let i = 0; i < products.length; i++) {
     let productContainer: HTMLDivElement = document.getElementById(products[i].id) as HTMLDivElement;
@@ -48,7 +44,6 @@ export function clearFilter() {
   invisibility = false;
 }
 
-// small variable changes to active or not active
 export function toggleSmall(checkbox: HTMLInputElement) {
   if (checkbox.checked) {
     small = true;
@@ -61,7 +56,6 @@ export function toggleSmall(checkbox: HTMLInputElement) {
   filterProducts();
 }
 
-// medium variable changes to active or not active
 export function toggleMedium(checkbox: HTMLInputElement) {
   if (checkbox.checked) {
     medium = true;
@@ -74,7 +68,6 @@ export function toggleMedium(checkbox: HTMLInputElement) {
   filterProducts();
 }
 
-// large variable changes to active or not active
 export function toggleLarge(checkbox: HTMLInputElement) {
   if (checkbox.checked) {
     large = true;
@@ -87,7 +80,6 @@ export function toggleLarge(checkbox: HTMLInputElement) {
   filterProducts();
 }
 
-// healing variable changes to active or not active
 export function toggleHealing(checkbox: HTMLInputElement) {
   if (checkbox.checked) {
     healing = true;
@@ -100,7 +92,6 @@ export function toggleHealing(checkbox: HTMLInputElement) {
   filterProducts();
 }
 
-// mana variable changes to active or not active
 export function toggleMana(checkbox: HTMLInputElement) {
   if (checkbox.checked) {
     mana = true;
@@ -113,7 +104,6 @@ export function toggleMana(checkbox: HTMLInputElement) {
   filterProducts();
 }
 
-// stamina variable changes to active or not active
 export function toggleStamina(checkbox: HTMLInputElement) {
   if (checkbox.checked) {
     stamina = true;
@@ -126,7 +116,6 @@ export function toggleStamina(checkbox: HTMLInputElement) {
   filterProducts();
 }
 
-// poison variable changes to active or not active
 export function togglePoison(checkbox: HTMLInputElement) {
   if (checkbox.checked) {
     poison = true;
@@ -139,7 +128,6 @@ export function togglePoison(checkbox: HTMLInputElement) {
   filterProducts();
 }
 
-// joy variable changes to active or not active
 export function toggleJoy(checkbox: HTMLInputElement) {
   if (checkbox.checked) {
     joy = true;
@@ -152,7 +140,6 @@ export function toggleJoy(checkbox: HTMLInputElement) {
   filterProducts();
 }
 
-// time variable changes to active or not active
 export function toggleTime(checkbox: HTMLInputElement) {
   if (checkbox.checked) {
     time = true;
@@ -165,7 +152,6 @@ export function toggleTime(checkbox: HTMLInputElement) {
   filterProducts();
 }
 
-// inivisibility variable changes to active or not active
 export function toggleInvisibility(checkbox: HTMLInputElement) {
   if (checkbox.checked) {
     invisibility = true;
@@ -178,9 +164,7 @@ export function toggleInvisibility(checkbox: HTMLInputElement) {
   filterProducts();
 }
 
-// shows selected filters
 export function filterProducts() {
-  // shows all products if nothing is checked & shows only checked filter if one is checked
   if (small || medium || large || healing || mana || stamina || poison || joy || time || invisibility) {
     for (let i = 0; i < products.length; i++) {
       let productContainer: HTMLDivElement = document.getElementById(products[i].id) as HTMLDivElement;
@@ -193,15 +177,9 @@ export function filterProducts() {
     }
   }
 
-  // checking of both a size and a type is checked
   if ((small || medium || large) && (healing || mana || stamina || poison || joy || time || invisibility)) {
     console.log('we have types and sizes on the list');
     for (let i = 0; i < products.length; i++) {
-      // only shows small potions that is matching the selected type filter
-      // For ex.
-      // SMALL & HEALING
-      // SMALL & TIME
-
       if (small) {
         for (let i = 0; i < products.length; i++) {
           if (healing) {
@@ -269,7 +247,7 @@ export function filterProducts() {
           }
         }
       }
-      // only shows medium potions that is matching the selected type filter
+
       if (medium) {
         for (let i = 0; i < products.length; i++) {
           if (healing) {
@@ -338,7 +316,6 @@ export function filterProducts() {
         }
       }
 
-      // only shows large potions that is matching the selected type filter
       if (large) {
         for (let i = 0; i < products.length; i++) {
           if (healing) {
@@ -407,8 +384,6 @@ export function filterProducts() {
         }
       }
     }
-
-    // shows all selected filters
   } else {
     if (small) {
       console.log('show me small');
@@ -465,7 +440,7 @@ export function filterProducts() {
       }
     }
     if (poison) {
-      console.log('show me poisen');
+      console.log('show me poison');
       for (let i = 0; i < products.length; i++) {
         let productContainer: HTMLDivElement = document.getElementById(products[i].id) as HTMLDivElement;
         if (products[i].type === 'poison') {
@@ -492,7 +467,7 @@ export function filterProducts() {
       }
     }
     if (invisibility) {
-      console.log('show me poisen');
+      console.log('show me invisibility');
       for (let i = 0; i < products.length; i++) {
         let productContainer: HTMLDivElement = document.getElementById(products[i].id) as HTMLDivElement;
         if (products[i].type === 'invisibility') {

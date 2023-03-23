@@ -1,8 +1,6 @@
 import { showShoppingCart, userCart } from '../checkout';
 import { emptyShoppingCart } from '../shoppingCartChanges';
 
-//modal function
-
 export function startModalFunctionality() {
   changeModalVisability();
 
