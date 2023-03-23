@@ -45,8 +45,6 @@ import ShelfSInvisibility from '../../assets/images/ShelfSInvisibility.png';
 import ShelfMInvisibility from '../../assets/images/ShelfMInvisibility.png';
 import ShelfLInvisibility from '../../assets/images/ShelfLInvisibility.png';
 
-//./../assets/images/placeholder_square.jpg
-
 export const products: ProductTemplate[] = [
   {
     name: 'Small Healing Potion',
