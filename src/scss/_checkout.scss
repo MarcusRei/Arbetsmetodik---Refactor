@@ -37,7 +37,7 @@
 
   &__title {
     font-size: 1.8em;
-    margin: 15px 0px 5px 0px;
+    margin: 15px 0 5px;
 
     @include mix.desktop {
       font-size: 2em;
@@ -58,7 +58,7 @@
   display: flex;
   align-items: center;
   margin: 5px;
-  padding: 0 5px 0 5px;
+  padding: 0 5px;
   width: 95%;
   justify-content: space-between;
   border-radius: 5px;
@@ -74,10 +74,12 @@
 
   &__Img {
     height: 5vh;
+
     @include mix.desktop {
       height: 8vh;
     }
   }
+
   &__remove-btn {
     width: 20%;
     height: 100%;
@@ -92,28 +94,34 @@
     @include mix.desktop {
       width: 10%;
     }
+
     &:hover {
       background-color: col.$color-grey-very-dark;
       cursor: pointer;
     }
   }
+
   &__quantity {
     &-container {
       display: flex;
       height: 30px;
+
       @include mix.desktop {
         height: 5vh;
       }
     }
+
     &-input {
       width: 20%;
+
       @include mix.desktop {
         width: 20%;
       }
     }
   }
+
   &:last-child {
-    margin: 5px 5px 0 5px;
+    margin: 5px 5px 0;
   }
 }
 
@@ -124,6 +132,7 @@
     align-items: center;
     width: 5%;
     padding-left: 3%;
+
     @include mix.desktop {
       width: 10%;
       padding-left: 0;
@@ -135,6 +144,7 @@
     justify-content: center;
     align-items: center;
     width: 50%;
+
     @include mix.desktop {
       width: 55%;
     }
@@ -146,6 +156,7 @@
     align-items: center;
     width: 35%;
     padding-right: 1%;
+
     @include mix.desktop {
       width: 30%;
       padding-right: 0;
@@ -153,7 +164,8 @@
     }
   }
 }
-//summa & checkout knapp
+
+// Summa & checkout knapp
 .sumContainer {
   display: flex;
   justify-content: space-evenly;

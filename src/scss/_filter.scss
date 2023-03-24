@@ -7,12 +7,13 @@
     position: absolute;
     display: none;
     height: 100vh;
-    background-color: rgba(72, 72, 72, 0.4);
+    background-color: rgba(72 72 72 40%);
     width: 100vw;
     left: 20vw;
     top: 0;
     z-index: 200;
   }
+
   &-container {
     position: fixed;
     height: 100vh;
@@ -20,7 +21,6 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5em;
-
     width: 60vw;
     z-index: 200;
     left: 0;
@@ -30,10 +30,12 @@
       width: 20vw;
     }
 
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
   }
+
   &-btn {
     @include mix.main-button;
+
     width: 4em;
     height: 3em;
 
@@ -62,11 +64,13 @@
       align-items: center;
     }
   }
+
   &-checkbox {
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
     height: 1.5em;
     width: 1.5em;
   }
+
   &-bar {
     position: relative;
     display: flex;
@@ -75,7 +79,6 @@
     justify-content: flex-end;
     right: 2em;
     align-items: center;
-    position: relative;
     margin-top: 2.5em;
     gap: 1em;
   }
@@ -87,6 +90,7 @@ input[type='checkbox'] {
 
 #clear-filter {
   @include mix.main-button;
+
   height: 3em;
 
   &:hover {

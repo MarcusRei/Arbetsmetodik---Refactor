@@ -12,11 +12,15 @@
     "eslint-plugin-promise": "^6.1.1",
     "parcel": "^2.8.2",
     "prettier": "^2.8.6",
+    "stylelint": "^15.3.0",
+    "stylelint-config-standard": "^31.0.0",
+    "stylelint-config-standard-scss": "^7.0.1",
     "tsc": "^2.0.4",
     "typescript": "^5.0.2"
   },
   "scripts": {
     "start": "npx parcel src/index.html src/html/products.html src/html/checkout.html",
-    "format": "npx prettier --write ."
+    "format": "npx prettier --write .",
+    "format-css": "npx stylelint **/*.scss"
   }
 }

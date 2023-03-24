@@ -15,7 +15,7 @@ header {
   color: col.$color-text-light;
 }
 
-//layout navigation bar
+// layout navigation bar
 nav {
   width: 100%;
   display: flex;
@@ -32,19 +32,21 @@ nav {
       justify-content: center;
       align-self: center;
       width: 30vw;
-      height: var.$header-height--mobile;
+      height: var.$header-height-mobile;
       cursor: pointer;
 
       @include mix.desktop {
         width: 10vw;
-        height: var.$header-height--desktop;
+        height: var.$header-height-desktop;
       }
     }
+
     &__box {
       display: flex;
       align-items: center;
       height: 100%;
     }
+
     &__icon {
       height: 60%;
 
@@ -62,6 +64,7 @@ nav {
       flex-direction: row;
       justify-content: center;
     }
+
     &__menu {
       display: none;
       flex-direction: column;
@@ -91,21 +94,20 @@ nav {
     color: col.$color-text-light;
 
     &:hover {
-      color: rgb(200, 200, 200);
+      color: rgb(200 200 200);
     }
   }
 
   .shoppingcart__container {
     display: flex;
-    height: var.$header-height--mobile;
+    height: var.$header-height-mobile;
     justify-content: flex-end;
     align-items: center;
     cursor: pointer;
-    display: flex;
     width: 40vw;
 
     @include mix.desktop {
-      height: var.$header-height--desktop;
+      height: var.$header-height-desktop;
       width: 10vw;
     }
 
@@ -127,13 +129,12 @@ nav {
   }
 }
 
-//hamburger-menu
+// hamburger-menu
 #hamburger__button {
-  display: flex; //
+  display: flex;
   justify-content: center;
   align-items: center;
   background-color: transparent;
-
   border: none;
   cursor: pointer;
   z-index: 100;
