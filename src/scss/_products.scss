@@ -24,12 +24,12 @@
     margin-bottom: 5em;
 
     @include mix.desktop {
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-flow: row wrap;
       width: 70vw;
       gap: 2em;
     }
   }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -43,6 +43,7 @@
     @include mix.desktop {
       width: 25%;
     }
+
     &-image {
       width: 90%;
       z-index: 1;
@@ -52,6 +53,7 @@
       }
     }
   }
+
   &__info {
     display: flex;
     flex-direction: column;
@@ -61,12 +63,13 @@
     padding-top: 2em;
     padding-bottom: 1em;
     margin-top: -1em;
+
     @include mix.desktop {
       width: 95%;
     }
+
     &-name {
       font-weight: 600;
-      width: 100%;
       margin-top: 1.5em;
       width: 70%;
       align-self: center;
@@ -77,6 +80,7 @@
         width: 80%;
       }
     }
+
     &-price {
       font-weight: 600;
       padding-left: 1.8em;
@@ -86,16 +90,20 @@
         width: 80%;
       }
     }
+
     &-amount {
       width: 2em;
     }
+
     &-text-container {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+
     &-buy-btn {
       @include mix.main-button;
+
       font-family: var.$font-main;
       font-weight: 600;
       cursor: pointer;
@@ -105,6 +113,7 @@
       }
     }
   }
+
   &__inputs {
     display: flex;
     gap: 1em;
