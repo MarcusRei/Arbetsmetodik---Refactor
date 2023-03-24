@@ -40,6 +40,7 @@
   padding: 1em;
 
   @include mix.main-button;
+
   border-radius: 15px;
   font-family: var.$font-main;
 }
