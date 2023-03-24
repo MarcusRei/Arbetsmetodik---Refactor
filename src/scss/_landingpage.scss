@@ -1,0 +1,46 @@
+@use 'mixins' as mix;
+@use 'colors' as col;
+@use 'variables' as var;
+
+#landing-page-body {
+  background-color: col.$color-grey-very-dark;
+  font-family: var.$font-main;
+}
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .welcome {
+    &__container {
+      color: col.$color-text-light;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__heading {
+      text-align: center;
+    }
+
+    &__body {
+      width: 60%;
+      text-align: center;
+    }
+  }
+}
+
+#enter-btn {
+  width: 6em;
+  font-size: 2em;
+  padding: 1em;
+
+  @include mix.main-button;
+
+  border-radius: 15px;
+  font-family: var.$font-main;
+}

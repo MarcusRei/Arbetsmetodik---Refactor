@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Cursed Cauldron</title>
+    <link href="scss/main.scss" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="./assets/images/HealthLarge.png" />
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital@1&family=Passions+Conflict&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <script defer src="ts/main.ts" type="module"></script>
+  </head>
+  <body id="landing-page-body">
+    <header>
+      <nav>
+        <!-- home-button -->
+        <div class="logo__container">
+          <!-- home-button -->
+          <a href="/" class="logo__box">
+            <img src="./assets/images/burnedCauldron.png" alt="The Cursed Cauldron Logo" class="logo__icon" />
+          </a>
+        </div>
+
+        <!-- desktopnav -->
+        <div class="desktopnav__container">
+          <ul class="desktopnav__menu">
+            <li>
+              <a href="./html/products.html" class="desktopnav__link">Products</a>
+            </li>
+            <li>
+              <a href="./html/checkout.html" class="desktopnav__link">Checkout</a>
+            </li>
+          </ul>
+          <div class="shoppingcart__container">
+            <span class="material-symbols-outlined shoppingcart__icon"> shopping_basket </span>
+          </div>
+        </div>
+      </nav>
+
+      <!-- hamburger-button -->
+      <button id="hamburger__button" type="button">
+        <span class="material-symbols-rounded hamburger__icon" id="menuIcon">menu</span>
+        <span class="material-symbols-rounded hamburger__icon" id="closeIcon">close</span>
+      </button>
+
+      <!-- mobilenav -->
+      <div class="mobilenav__container" id="mobilenav">
+        <ul class="mobilenav__menu">
+          <li class="mobilenav__menu-item">
+            <a href="./html/products.html" class="mobilenav__menu-link">Products</a>
+          </li>
+          <li class="mobilenav__menu-item">
+            <a href="./html/checkout.html" class="mobilenav__menu-link">Checkout</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- usercart widget  -->
+      <article id="user-cart__container" class="user-cart__invisible"></article>
+    </header>
+
+    <main class="main__container">
+      <section id="message-container" class="welcome__container">
+        <h3 id="message-heading" class="welcome__heading">welcome to The Cursed Cauldron!</h3>
+        <p id="message-paragraph" class="welcome__body">
+          Hello, my name is... well, it's been long forgotten. Around here they call me 'The Shady Lady'. I welcome you
+          to my shop, step right in and select your brews.
+        </p>
+      </section>
+      <button id="enter-btn" class="btn">Enter</button>
+    </main>
+
+    <footer id="footer">
+      <div class="footer__information-container">
+        <div class="footer__customerservice-container">
+          <h3 class="footer__customerservice-title">Customer service</h3>
+          <p class="footer__customerservice-info">Talk wisely to the Shady Lady</p>
+        </div>
+        <div class="footer__contact-container">
+          <h3 class="footer__contact-title">Contact</h3>
+          <h4 class="footer__contact-info">Send your crow to:</h4>
+          <span class="footer__contact-info contact-info__body">The Cursed Cauldron</span>
+          <span class="footer__contact-info contact-info__body">The Dark alley of Dragonsdoom</span>
+        </div>
+        <img
+          src="./assets/images/logoName&Cauldron.png"
+          alt="The Cursed Cauldron Logotype"
+          class="footer__logotype-img"
+        />
+      </div>
+      <div class="footer__copyright-container">
+        <span class="footer__copyright">The Cursed Cauldron &copy; 2022</span>
+      </div>
+    </footer>
+  </body>
+</html>
