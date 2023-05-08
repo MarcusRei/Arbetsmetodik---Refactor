@@ -1,23 +1,28 @@
-# Inlämningsuppgift 2 - Arbetsmetodik
+# Refactor the code
 
-## Commit-konvention
+## Assignment in work methodology (Arbetsmetodik)
+This was an assignment for the course Arbetsmetodik as part of my education (Frontend developer) at Medieinstitutet.
 
-Jag har bestämt mig för att använda conventional commit då det känns tydligt och jag har viss erfarenhet med det från den tidigare uppgiften. Jag är intresserad av att använda gitmoji-metoden men känner mig inte riktigt säker på den och känner att det skulle sakta ner mig för mycket just nu då denna uppgift redan har en tajt tidsram.
+## Setup
+We were asked to take one our previous projects and refactor the code based on code smells and best practices.
 
-## Delar att refaktorera
+### Log of changes
 
-### SCSS
+#### Conventional commits
+During this assignment I chose to use conventional commits to practice writing more meaningful commits that are more clear and concise. I was thinking of using the gitmoji method but since I hadn´t used it before I and we only had a week I decided to stick with convetional commits.
+ 
+#### SCSS
 
-Då den scss som är skriven är en mix av kod som jag skrivit helt på egen hand och kod som skrivits av andra medlemmar i ett tidigare grupparbete. Scss:en är en aning rörig då vi har blandat olika konventioner för både namngivning av klasser men också hur mycket vi har använt de fördelar scss faktiskt ger oss.
+Since the project I chose to refactor is an old group project and a project we did a while ago the SCSS we originally wrote is a bit messy.
+I decided to rewrite big parts of the code to have a more coherent naming convetion and follow the BEM method.
 
-Jag kommer även att köra stylelint på vår scss för att städa upp koden från semantiska fel.
+#### Stylelint
+I chose to use stylelint to conform my SCSS to the standards of modern SCSS-writing.
 
-### Eslint & Prettier
+#### ESLint & Prettier
 
-Jag kommer att använda både prettier och eslint för att formatera om koden så att den följer en mer konkret standard.
+I used ESLint & Prettier on all the code to conform to modern standards and keep the code as easy to read as possible.
 
-### Manuell rensning i koden
+#### Code cleanup
 
-När vi gjorde projektet ursprungligen så skrev vi mycket kommentarer för att förmedla vad saker var till varandra och hur de fungerade. Jag kommer ta bort alla kommentarer som förklarar "hur" något fungerar men lämnar kommentarer om de förklarar "varför" saker ser ut som de gör.
-
-Jag kommer även att ta bort alla loggar som inte längre fyller ett syfte.
+As we originally wrote the code we wrote a lot of comments to communicate our different choices. Since then I have learned to write better code that is more easily read and cleaner in general and so I have decided to clean out a lot of the old comments and messy code in general.
